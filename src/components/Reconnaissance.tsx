@@ -3,7 +3,6 @@ import React from 'react';
 const Footer = React.lazy(() => import('./Footer'));
 const Checkbox = React.lazy(() => import('./Checkbox'));
 
-
 export default function Reconnaissance() {
     const steps = [
         {

@@ -4,20 +4,62 @@ const Footer = React.lazy(() => import('./Footer'));
 
 export default function Index() {
     const steps = [
-        'Reconnaissance',
-        'Resource Development',
-        'Initial Access',
-        'Execution',
-        'Persistence',
-        'Privilege Escalation',
-        'Defense Evasion',
-        'Credential Access',
-        'Discovery',
-        'Lateral Movement',
-        'Collection',
-        'Command and Control',
-        'Exfiltration',
-        'Impact',
+        {
+            name: 'Reconnaissance',
+            link: 'reconnaissance',
+        },
+        {
+            name: 'Resource Development',
+            link: 'resourcedevelopment',
+        },
+        {
+            name: 'Initial Access',
+            link: 'initialaccess',
+        },
+        {
+            name: 'Execution',
+            link: 'execution',
+        },
+        {
+            name: 'Persistence',
+            link: 'persistence',
+        },
+        {
+            name: 'Privilege Escalation',
+            link: 'privilegeescalation',
+        },
+        {
+            name: 'Defense Evasion',
+            link: 'defenseevasion',
+        },
+        {
+            name: 'Credential Access',
+            link: 'credentialaccess',
+        },
+        {
+            name: 'Discovery',
+            link: 'discovery',
+        },
+        {
+            name: 'Lateral Movement',
+            link: 'lateralmovement',
+        },
+        {
+            name: 'Collection',
+            link: 'collection',
+        },
+        {
+            name: 'Command and Control',
+            link: 'commandandcontrol',
+        },
+        {
+            name: 'Exfiltration',
+            link: 'exfiltration',
+        },
+        {
+            name: 'Impact',
+            link: 'impact',
+        }
     ];
 
     return (
@@ -36,7 +78,7 @@ export default function Index() {
                     <ol>
                         {
                             steps.map(step => (
-                                <li key={step}>{step}</li>
+                                <li key={step.name}><a href={step.link}>{step.name}</a></li>
                             ))
                         }
                     </ol>
