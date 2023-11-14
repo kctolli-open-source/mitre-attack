@@ -1,5 +1,6 @@
 import Index from './components/Index';
 import Reconnaissance from './components/Reconnaissance';
+import ResourceDevelopment from './components/ResourceDevelopment';
 
 const routes = [
     {
@@ -9,6 +10,10 @@ const routes = [
     {
         path: "reconnaissance",
         element: <Reconnaissance />
+    },
+    {
+        path: "resourcedevelopment",
+        element: <ResourceDevelopment />
     }
 ];
 
