@@ -9,6 +9,8 @@ export default function Main() {
                 />
 
                 <p>Congrats you have completed the MITRE ATT&CK framework</p>
+
+                <a href="/"> Home </a>
             </main>
         </>
     );
