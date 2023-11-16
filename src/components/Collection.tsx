@@ -3,7 +3,6 @@ import steps from '../data/resourcedevelopment';
 
 const Checklist = React.lazy(() => import('../common/Checklist'));
 const OverviewSection = React.lazy(() => import('../common/OverviewSection'));
-const StepsSection = React.lazy(() => import('../common/StepsSection'));
 const NextStep = React.lazy(() => import('../common/NextStep'));
 
 export default function Main() {
@@ -19,9 +18,7 @@ export default function Main() {
                         </p>
                     </>
                 </OverviewSection>
-                <StepsSection>
-                    <Checklist steps={steps} />
-                </StepsSection>
+                <Checklist steps={steps} />
                 <NextStep link="/commandcontrol" text="Command and Control" />
             </main>
         </>
