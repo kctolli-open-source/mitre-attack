@@ -1,5 +1,5 @@
 import React from 'react';
-import steps from '../data/resourcedevelopment';
+import steps from '../data/privilegeescalation';
 
 const Checklist = React.lazy(() => import('../common/Checklist'));
 const OverviewSection = React.lazy(() => import('../common/OverviewSection'));
