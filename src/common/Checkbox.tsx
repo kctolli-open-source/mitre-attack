@@ -25,7 +25,7 @@ export default function Checkbox({name, bullets}: { name: string, bullets?: stri
         <div key={name} id={name}>
             <input type="checkbox" name={name} value={name} />
             <label htmlFor={name}> {name} </label>
-            {(bullets?.length) ? <List />: <></>}
+            {(bullets && bullets?.length) ? <List />: <></>}
         </div>
     );
 }
