@@ -62,6 +62,10 @@ const routes: routeType[] = [
     {
         path: "impact",
         element: <components.Impact />
+    },
+    {
+        path: "completion",
+        element: <components.Complete />
     }
 ];
 

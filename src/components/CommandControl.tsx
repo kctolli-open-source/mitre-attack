@@ -9,22 +9,20 @@ const NextStep = React.lazy(() => import('../common/NextStep'));
 export default function Main() {
     return (
         <>
-            <h1>Initial Access</h1>
+            <h1>Command and Control</h1>
             <main>
                 <OverviewSection>
                     <>
-                        <p>The adversary is trying to get into your network.</p>
+                        <p>The adversary is trying to communicate with compromised systems to control them.</p>
                         <p>
-                            Initial Access consists of techniques that use various entry vectors to gain their initial foothold within a network. 
-                            Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. 
-                            Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
+                        Command and Control consists of techniques that adversaries may use to communicate with systems under their control within a victim network. Adversaries commonly attempt to mimic normal, expected traffic to avoid detection. There are many ways an adversary can establish command and control with various levels of stealth depending on the victim’s network structure and defenses.
                         </p>
                     </>
                 </OverviewSection>
                 <StepsSection>
                     <Checklist steps={steps} />
                 </StepsSection>
-                <NextStep link="/execution" text="Execution" />
+                <NextStep link="/exfiltration" text="Exfiltration" />
             </main>
         </>
     );

@@ -13,6 +13,7 @@ import Discovery from './Discovery';
 import Exfilration from './Exfilration';
 import Impact from './Impact';
 import LateralMovement from './LateralMovement';
+import Complete from './Complete';
 
 /** 
  * Components to Export 
@@ -25,6 +26,7 @@ import LateralMovement from './LateralMovement';
 const components = {
     Collection,
     CommandControl,
+    Complete,
     CredentialAccess,
     DefenseEvasion, 
     Discovery,

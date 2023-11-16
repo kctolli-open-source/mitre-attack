@@ -9,22 +9,20 @@ const NextStep = React.lazy(() => import('../common/NextStep'));
 export default function Main() {
     return (
         <>
-            <h1>Initial Access</h1>
+            <h1>Collection</h1>
             <main>
                 <OverviewSection>
                     <>
-                        <p>The adversary is trying to get into your network.</p>
+                        <p>The adversary is trying to gather data of interest to their goal.</p>
                         <p>
-                            Initial Access consists of techniques that use various entry vectors to gain their initial foothold within a network. 
-                            Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. 
-                            Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
+                        Collection consists of techniques adversaries may use to gather information and the sources information is collected from that are relevant to following through on the adversary's objectives. Frequently, the next goal after collecting data is to steal (exfiltrate) the data. Common target sources include various drive types, browsers, audio, video, and email. Common collection methods include capturing screenshots and keyboard input.
                         </p>
                     </>
                 </OverviewSection>
                 <StepsSection>
                     <Checklist steps={steps} />
                 </StepsSection>
-                <NextStep link="/execution" text="Execution" />
+                <NextStep link="/commandcontrol" text="Command and Control" />
             </main>
         </>
     );
