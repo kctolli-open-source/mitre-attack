@@ -9,22 +9,20 @@ const NextStep = React.lazy(() => import('../common/NextStep'));
 export default function Main() {
     return (
         <>
-            <h1>Initial Access</h1>
+            <h1>Privilege Escalation</h1>
             <main>
                 <OverviewSection>
                     <>
-                        <p>The adversary is trying to get into your network.</p>
+                        <p>The adversary is trying to gain higher-level permissions.</p>
                         <p>
-                            Initial Access consists of techniques that use various entry vectors to gain their initial foothold within a network. 
-                            Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. 
-                            Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
+                            Privilege Escalation consists of techniques that adversaries use to gain higher-level permissions on a system or network. Adversaries can often enter and explore a network with unprivileged access but require elevated permissions to follow through on their objectives. Common approaches are to take advantage of system weaknesses, misconfigurations, and vulnerabilities. 
                         </p>
                     </>
                 </OverviewSection>
                 <StepsSection>
                     <Checklist steps={steps} />
                 </StepsSection>
-                <NextStep link="/execution" text="Execution" />
+                <NextStep link="/defenseevasion" text="Defense Evasion" />
             </main>
         </>
     );

@@ -9,22 +9,20 @@ const NextStep = React.lazy(() => import('../common/NextStep'));
 export default function Main() {
     return (
         <>
-            <h1>Initial Access</h1>
+            <h1>Defense Evasion</h1>
             <main>
                 <OverviewSection>
                     <>
-                        <p>The adversary is trying to get into your network.</p>
+                        <p>The adversary is trying to avoid being detected.</p>
                         <p>
-                            Initial Access consists of techniques that use various entry vectors to gain their initial foothold within a network. 
-                            Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. 
-                            Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
+                        Defense Evasion consists of techniques that adversaries use to avoid detection throughout their compromise. Techniques used for defense evasion include uninstalling/disabling security software or obfuscating/encrypting data and scripts. Adversaries also leverage and abuse trusted processes to hide and masquerade their malware. Other tactics’ techniques are cross-listed here when those techniques include the added benefit of subverting defenses.
                         </p>
                     </>
                 </OverviewSection>
                 <StepsSection>
                     <Checklist steps={steps} />
                 </StepsSection>
-                <NextStep link="/execution" text="Execution" />
+                <NextStep link="/credentialaccess" text="Credential Access" />
             </main>
         </>
     );

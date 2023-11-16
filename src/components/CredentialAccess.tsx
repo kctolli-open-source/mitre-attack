@@ -9,22 +9,20 @@ const NextStep = React.lazy(() => import('../common/NextStep'));
 export default function Main() {
     return (
         <>
-            <h1>Initial Access</h1>
+            <h1>Credential Access</h1>
             <main>
                 <OverviewSection>
                     <>
-                        <p>The adversary is trying to get into your network.</p>
+                        <p>The adversary is trying to steal account names and passwords.</p>
                         <p>
-                            Initial Access consists of techniques that use various entry vectors to gain their initial foothold within a network. 
-                            Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. 
-                            Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
+                        Credential Access consists of techniques for stealing credentials like account names and passwords. Techniques used to get credentials include keylogging or credential dumping. Using legitimate credentials can give adversaries access to systems, make them harder to detect, and provide the opportunity to create more accounts to help achieve their goals.
                         </p>
                     </>
                 </OverviewSection>
                 <StepsSection>
                     <Checklist steps={steps} />
                 </StepsSection>
-                <NextStep link="/execution" text="Execution" />
+                <NextStep link="/discovery" text="Discovery" />
             </main>
         </>
     );
