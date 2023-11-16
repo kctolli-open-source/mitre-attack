@@ -1,3 +1,8 @@
 h1, footer {
     text-align: center;
 }
+
+.next-step {
+    display: flex;
+    justify-content: right;
+}

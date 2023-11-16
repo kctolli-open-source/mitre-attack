@@ -1,64 +1,30 @@
 import React from 'react';
+import steps from '../data/reconnaissance';
 
-const Checkbox = React.lazy(() => import('./Checkbox'));
+const Checklist = React.lazy(() => import('../common/Checklist'));
+const OverviewSection = React.lazy(() => import('../common/OverviewSection'));
+const StepsSection = React.lazy(() => import('../common/StepsSection'));
+const NextStep = React.lazy(() => import('../common/NextStep'));
 
-export default function Reconnaissance() {
-    const steps = [
-        {
-            name: 'Active Scanning',
-            bullets: ['Scanning IP Blocks', 'Vulnerability Scanning', 'Wordlist Scanning'],
-        },
-        {
-            name: "Gather Victim Host Information",
-            bullets: ["Hardware", "Software", "Firmware", "Client Configurations"],  
-        },
-        {
-            name: "Gather Victim Identity Information",
-            bullets: ["Credentials", "Email Addresses", "Employee Names"],
-        },
-        {
-            name: "Gather Victim Network Information",
-            bullets: ["Domain Properties", "DNS", "Network Trust Dependencies", "Network Topology", "IP Addresses", "Network Security Appliances"],
-        },
-        {
-            name: "Gather Victim Organizational Information",
-            bullets: ["Determine Physical Locations", "Business Relationships", "Identify Business Tempo", "Identify Roles"]
-        },
-        {
-            name: "Phishing for Information",
-            bullets: ["Spearphishing Service", "Spearphishing Attachment", "Spearphishing Link", "Spearphishing Voice"],
-        },
-        {
-            name: "Search Closed Sources",
-            bullets: ["Threat Intel Vendors", "Purchase Technical Data"],
-        },
-        {
-            name: "Search Open Technical Databases",
-            bullets: ["DNS/Passive DNS", "WHOIS", "Digital Certificates", "CDNs", "Scan Databases"],
-        },
-        {
-            name: "Search Open Websites/Domains",
-            bullets: ["Social Media", "Search Engines", "Code Repositories"],
-        },
-        {
-            name: "Search Victim-Owned Websites"
-        }
-    ];
-
+export default function Main() {
     return (
         <>
             <h1>Reconnaissance</h1>
             <main>
-                <section>
-                    <h2>Overview</h2>
-                    <p>The adversary is trying to gather information they can use to plan future operations.</p>
-                </section>
-                <section>
-                    <h2>Steps</h2>
-                    {steps.map(step => (
-                        <Checkbox key={step.name} name={step.name} bullets={step.bullets} />
-                    ))}
-                </section>
+                <OverviewSection>
+                    <>
+                        <p>The adversary is trying to gather information they can use to plan future operations.</p>
+                        <p>
+                            Reconnaissance consists of techniques that involve adversaries actively or passively gathering information that can be used to support targeting. 
+                            Such information may include details of the victim organization, infrastructure, or staff/personnel. 
+                            This information can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as using gathered information to plan and execute Initial Access, to scope and prioritize post-compromise objectives, or to drive and lead further Reconnaissance efforts.
+                        </p>
+                    </>
+                </OverviewSection>
+                <StepsSection>
+                    <Checklist steps={steps} />
+                </StepsSection>
+                <NextStep link="/resourcedevelopment" text="Resource Development" />
             </main>
         </>
     );

@@ -1,19 +1,67 @@
-import Index from './components/Index';
-import Reconnaissance from './components/Reconnaissance';
-import ResourceDevelopment from './components/ResourceDevelopment';
+import components from './components/main';
 
-const routes = [
+import { routeType } from './data/types';
+
+const routes: routeType[] = [
     {
-        path: "/",
-        element: <Index />
+        path: "*",
+        element: <components.Index />
     },
     {
         path: "reconnaissance",
-        element: <Reconnaissance />
+        element: <components.Reconnaissance />
     },
     {
         path: "resourcedevelopment",
-        element: <ResourceDevelopment />
+        element: <components.ResourceDevelopment />
+    },
+    {
+        path: "initialaccess",
+        element: <components.InitialAccess />
+    },
+    {
+        path: "execution",
+        element: <components.Execution />
+    },
+    {
+        path: "persistence",
+        element: <components.Persistence />
+    },
+    {
+        path: "privilegeescalation",
+        element: <components.PrivilegeEscalation />
+    },
+    {
+        path: "defenseevasion",
+        element: <components.DefenseEvasion />
+    },
+    {
+        path: "credentialaccess",
+        element: <components.CredentialAccess />
+    },
+    {
+        path: "discovery",
+        element: <components.Discovery />
+    },
+    {
+        path: "lateralmovement",
+        element: <components.LateralMovement />
+    },
+    {
+        path: "collection",
+        element: <components.Collection />
+    },
+    {
+        path: "commandcontrol",
+        element: <components.CommandControl />
+    },
+    {
+        path: "exfiltration",
+        element: <components.Exfilration />
+    }, 
+    {
+        path: "impact",
+        element: <components.Impact />
     }
 ];
 
