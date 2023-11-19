@@ -10,11 +10,11 @@ const steps: stepsType[] = [
     },
     {
         name: 'Boot / Logon Autostart Execution',
-        bullets: [''],
+        bullets: ['Registry Run Keys / Startup Folder', 'Authentication Package', 'Time Providers', 'Winlogon Helper DLL', 'Security Support Provider', 'Kernel Modules and Extensions', 'Re-opened Applications', 'LSASS Driver', 'Shortcut Modification', 'Port Monitors', 'Print Processors', 'XDG Autostart Entries', 'Active Setup', 'Login Items'],
     },
     {
         name: 'Boot / Logon Initialization Scripts',
-        bullets: [''],
+        bullets: ['Logon Script (Windows)', 'Login Hook', 'Network Logon Script', 'RC Scripts', 'Startup Items'],
     },
     {
         name: 'Browser Extensions', 
@@ -24,25 +24,47 @@ const steps: stepsType[] = [
     },
     {
         name: 'Create Account',
-        bullets: [''],
+        bullets: ['Local Account', 'Domain Account', 'Cloud Account'],
     },
     {
         name: 'Create and Modify System Process',
-        bullets: [''],
+        bullets: ['Launch Agent', 'Systemd Service', 'Windows Service', 'Launch Daemon'],
     },
     {
         name: 'Event Triggered Execution',
-        bullets: [''],
+        bullets: ['Change Default File Association', 'Screensaver', 'Windows Management Instrumentation Event Subscription', 'Unix Shell Configuration Modification', 'Trap', 'LC_LOAD_DYLIB Addition', 'Netsh Helper DLL', 'Accessibility Features', 'AppCert DLLs', 'AppInit DLLs', 'Application Shimming', 'Image File Execution Options Injection', 'PowerShell Profile', 'Emond', 'Component Object Model Hijacking', 'Installer Packages', ],
     },
     {
         name: 'External Remote Services',
     },
     {
         name: 'Hijack Execution Flow',
-        bullets: [''],
+        bullets: ['DLL Search Order Hijacking', 'DLL Side-Loading', 'Dylib Hijacking', 'Executable Installer File Permissions Weakness', 'Dynamic Linker Hijacking', 'Path Interception by PATH Environment Variable', 'Path Interception by Search Order Hijacking', 'Path Interception by Unquoted Path', 'Services File Permissions Weakness', 'Services Registry Permissions Weakness', 'COR_PROFILER', 'KernelCallbackTable'],
     },
     {
         name: 'Implant Internal Image',
+    },
+    {
+        name: 'Modify Authentication Process',
+        bullets: ['Domain Controller Authentication', 'Password Filter DLL', 'Pluggable Authentication Modules', 'Network Device Authentication', 'Reversible Encryption', 'Multi-Factor Authentication', 'Hybrid Identity', 'Network Provider DLL'],
+    },
+    {
+        name: 'Office Application Startup',
+        bullets: ['Office Template Macros', 'Office Test', 'Outlook Forms', 'Outlook Home Page', 'Outlook Rules', 'Add-ins']
+    },
+    {
+        name: 'Power Settings',
+    },
+    {
+        name: 'Pre-OS Boot',
+        bullets: ['System Firmware', 'Component Firmware', 'Bootkit', 'ROMMONkit', 'TFTP Boot'],
+    },
+    {
+        name: 'Scheduled Task / Job',
+        bullets: ['At', 'Cron', 'Scheduled Task', 'Systemd Timers', 'Container Orchestration Job'],
+    },
+    {
+        name: 'Server Software Component',
     }
 ];
 
