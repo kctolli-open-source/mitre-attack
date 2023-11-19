@@ -2,15 +2,15 @@ import React from 'react';
 import steps from '../data/initialaccess';
 
 const Checklist = React.lazy(() => import('../common/Checklist'));
-const OverviewSection = React.lazy(() => import('../common/OverviewSection'));
+const Overview = React.lazy(() => import('../common/Overview'));
 const NextStep = React.lazy(() => import('../common/NextStep'));
 
 export default function Main() {
     return (
         <>
-            <h1>Initial Access</h1>
-            <main>
-                <OverviewSection>
+            <h2>Initial Access</h2>
+            <section>
+                <Overview>
                     <>
                         <p>The adversary is trying to get into your network.</p>
                         <p>
@@ -19,10 +19,10 @@ export default function Main() {
                             Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
                         </p>
                     </>
-                </OverviewSection>
+                </Overview>
                 <Checklist steps={steps} />
                 <NextStep link="/execution" text="Execution" />
-            </main>
+            </section>
         </>
     );
 }

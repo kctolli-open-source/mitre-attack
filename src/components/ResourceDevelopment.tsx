@@ -2,15 +2,15 @@ import React from 'react';
 import steps from '../data/resourcedevelopment';
 
 const Checklist = React.lazy(() => import('../common/Checklist'));
-const OverviewSection = React.lazy(() => import('../common/OverviewSection'));
+const Overview = React.lazy(() => import('../common/Overview'));
 const NextStep = React.lazy(() => import('../common/NextStep'));
 
 export default function Main() {
     return (
         <>
-            <h1>Resource Development</h1>
-            <main>
-                <OverviewSection>
+            <h2>Resource Development</h2>
+            <section>
+                <Overview>
                     <>
                         <p>The adversary is trying to establish resources they can use to support operations.</p>
                         <p>
@@ -19,10 +19,10 @@ export default function Main() {
                             These resources can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as using purchased domains to support Command and Control, email accounts for phishing as a part of Initial Access, or stealing code signing certificates to help with Defense Evasion.
                         </p>
                     </>
-                </OverviewSection>
+                </Overview>
                 <Checklist steps={steps} />
                 <NextStep link="/initialaccess" text="Initial Access" />
-            </main>
+            </section>
         </>
     );
 }

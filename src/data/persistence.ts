@@ -1,4 +1,4 @@
-import { stepsType } from './types';
+import { stepsType } from '../types';
 
 const steps: stepsType[] = [
     {
@@ -33,6 +33,16 @@ const steps: stepsType[] = [
     {
         name: 'Event Triggered Execution',
         bullets: [''],
+    },
+    {
+        name: 'External Remote Services',
+    },
+    {
+        name: 'Hijack Execution Flow',
+        bullets: [''],
+    },
+    {
+        name: 'Implant Internal Image',
     }
 ];
 

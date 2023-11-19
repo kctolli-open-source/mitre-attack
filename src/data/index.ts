@@ -1,4 +1,4 @@
-import { indexType } from './types';
+import { indexType } from '../types';
 
 const steps: indexType[] = [
     {

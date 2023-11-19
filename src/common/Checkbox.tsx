@@ -14,18 +14,27 @@ export default function Checkbox({name, bullets}: { name: string, bullets?: stri
     const List = () => (
         <ul>
             {
-                bullets?.map(bullet => (
-                    <li key={bullet}>{bullet}</li>
-                ))
+                bullets?.map(bullet => {
+                    {if (bullet) {
+                        return <li key={bullet}>{bullet}</li>
+                    }}
+                })
             }
         </ul>
     );
     
-    return (    
+    /**
+     * Renders a Box component.
+     *
+     * @return {JSX.Element} The rendered Box component.
+     */
+    const Box = () => (
         <div key={name} id={name}>
             <input type="checkbox" name={name} value={name} />
             <label htmlFor={name}> {name} </label>
             {(bullets && bullets?.length) ? <List />: <></>}
         </div>
     );
+
+    return name ? <Box /> : <></>;
 }

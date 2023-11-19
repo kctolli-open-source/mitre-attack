@@ -1,15 +1,19 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from "react";
+import Checkbox from "./Checkbox";
 
-const Checkbox = React.lazy(() => import('./Checkbox'));
-
+/**
+ * Renders a checklist component.
+ *
+ * @param {Array} steps - An array of steps for the checklist.
+ * @return {JSX.Element} - The rendered checklist component.
+ */
 export default function Checklist({steps}: { steps: any[] }) {
     return (
-        <section key="steps">
-            <h2>Steps</h2>
+        <article key="steps">
+            <h3>Steps</h3>
             {steps.map((step: { name: any; bullets: any; }) => (
                 <Checkbox key={step.name} name={step.name} bullets={step.bullets} />
             ))}
-        </section>
+        </article>
     );
 }
