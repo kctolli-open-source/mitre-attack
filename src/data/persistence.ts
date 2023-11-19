@@ -65,6 +65,15 @@ const steps: stepsType[] = [
     },
     {
         name: 'Server Software Component',
+        bullets: ['SQL Stored Procedures', 'Transport Agent', 'Web Shell', 'IIS Components', 'Terminal Services DLL'],
+    },
+    {
+        name: 'Traffic Signaling',
+        bullets: ['Port Knocking', 'Socket Filters'],
+    },
+    {
+        name: 'Valid Accounts',
+        bullets: ['Default Accounts', 'Domain Accounts', 'Local Accounts', 'Cloud Accounts'],
     }
 ];
 

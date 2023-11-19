@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+ 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { routeType } from "../types";
 
