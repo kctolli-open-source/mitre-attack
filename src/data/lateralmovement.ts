@@ -8,7 +8,6 @@ const steps: string[] = [
     'Software Deployment Tools',
     'Taint Shared Content',
     'Use Alternate Authentication Material',
-    
 ];
 
 export default steps;
