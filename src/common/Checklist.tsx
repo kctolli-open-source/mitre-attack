@@ -11,8 +11,8 @@ export default function Checklist({steps}: { steps: any[] }) {
     return (
         <article key="steps">
             <h3>Steps</h3>
-            {steps.map((step: { name: any; bullets: any; }) => (
-                <Checkbox key={step.name} name={step.name} bullets={step.bullets} />
+            {steps.map((step: string) => (
+                <Checkbox key={step} name={step} />
             ))}
         </article>
     );

@@ -1,9 +1,5 @@
-import { stepsType } from '../types';
-
-const steps: stepsType[] = [
-    {
-        name: 'Acquire Access',
-    },
+const steps: string[] = [
+    'Account Discovery',
 ];
 
 export default steps;
