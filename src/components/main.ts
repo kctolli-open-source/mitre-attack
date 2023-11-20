@@ -2,29 +2,29 @@
  * Components to Export 
  * Read from routes.tsx
  * 
- * * Example: 
+ * Example: 
  * * import components from './components/main'; *
  * * <components.Component/> *
 */
-import React from 'react';
+import { lazy } from 'react';
 
 const components = {
-    Collection: React.lazy(() => import('./Collection')),
-    CommandControl: React.lazy(() => import('./CommandControl')),
-    Complete: React.lazy(() => import('./Complete')),
-    CredentialAccess: React.lazy(() => import('./CredentialAccess')),
-    DefenseEvasion: React.lazy(() => import('./DefenseEvasion')), 
-    Discovery: React.lazy(() => import('./Discovery')),
-    Execution: React.lazy(() => import('./Execution')),
-    Exfilration: React.lazy(() => import('./Exfilration')),
-    Impact: React.lazy(() => import('./Impact')),
-    Index: React.lazy(() => import('./Index')),
-    InitialAccess: React.lazy(() => import('./InitialAccess')),
-    LateralMovement: React.lazy(() => import('./LateralMovement')),
-    Persistence: React.lazy(() => import('./Persistence')),
-    PrivilegeEscalation: React.lazy(() => import('./PrivilegeEscalation')),
-    Reconnaissance: React.lazy(() => import('./Reconnaissance')),
-    ResourceDevelopment: React.lazy(() => import('./ResourceDevelopment')),
+    Collection: lazy(() => import('./Collection')),
+    CommandControl: lazy(() => import('./CommandControl')),
+    Complete: lazy(() => import('./Complete')),
+    CredentialAccess: lazy(() => import('./CredentialAccess')),
+    DefenseEvasion: lazy(() => import('./DefenseEvasion')), 
+    Discovery: lazy(() => import('./Discovery')),
+    Execution: lazy(() => import('./Execution')),
+    Exfilration: lazy(() => import('./Exfilration')),
+    Impact: lazy(() => import('./Impact')),
+    Index: lazy(() => import('./Index')),
+    InitialAccess: lazy(() => import('./InitialAccess')),
+    LateralMovement: lazy(() => import('./LateralMovement')),
+    Persistence: lazy(() => import('./Persistence')),
+    PrivilegeEscalation: lazy(() => import('./PrivilegeEscalation')),
+    Reconnaissance: lazy(() => import('./Reconnaissance')),
+    ResourceDevelopment: lazy(() => import('./ResourceDevelopment')),
 };
 
 export default components;
