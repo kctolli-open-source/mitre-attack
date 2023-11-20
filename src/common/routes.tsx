@@ -1,5 +1,5 @@
-import components from './components/main';
-import { routeType } from './types';
+import components from '../components/main';
+import { routeType } from '../types';
 
 const routes: routeType[] = [
     {

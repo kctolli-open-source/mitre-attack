@@ -1,5 +1,5 @@
 import { ReactElement, lazy } from 'react';
-import routes from "./routes";
+import routes from "./common/routes";
 
 const Router = lazy(() => import('./common/Router'));
 const Footer = lazy(() => import('./common/Footer'));
