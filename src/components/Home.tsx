@@ -1,8 +1,8 @@
 import React from "react";
-import steps from "../data/index";
 
 const Overview = React.lazy(() => import('../common/Overview'));
 const NextStep = React.lazy(() => import('../common/NextStep'));
+const StepsLinks = React.lazy(() => import('../common/StepsLinks'));
 
 export default function Main() {
     return (
@@ -15,16 +15,7 @@ export default function Main() {
                     The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.
                 </p>
             </Overview>
-            <article>
-                <h3>Steps</h3>
-                <ol>
-                    {
-                        steps.map(step => (
-                            <li key={step.name}><a href={step.link}>{step.name}</a></li>
-                        ))
-                    }
-                </ol>
-            </article>
+            <StepsLinks />
             <NextStep 
                 link="/reconnaissance" 
                 text="Lets Get Started" 

@@ -1,3 +1,8 @@
+/**
+ * Renders the Footer component.
+ *
+ * @return {JSX.Element} The rendered Footer component.
+ */
 export default function Footer() {
     return (
         <footer>
