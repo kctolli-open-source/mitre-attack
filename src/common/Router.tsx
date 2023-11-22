@@ -1,13 +1,14 @@
  
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { routeType } from "../types";
+
+import routes from "./routes";
 
 /**
  * Renders a router component that handles the routing of the application.
  *
  * @return {JSX.Element} The router component.
  */
-export default function Router({routes}: { routes: routeType[] }) {
+export default function Router() {
     return (
         <BrowserRouter>
             <Routes>

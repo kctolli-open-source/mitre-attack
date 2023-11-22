@@ -1,5 +1,4 @@
-import { ReactElement, lazy } from 'react';
-import routes from "./common/routes";
+import { ReactElement, lazy, StrictMode } from 'react';
 
 const Router = lazy(() => import('./common/Router'));
 const Footer = lazy(() => import('./common/Footer'));
@@ -12,9 +11,10 @@ const Footer = lazy(() => import('./common/Footer'));
 export default function App(): ReactElement {
     return (
         <>
-            <Router routes={routes} />
-            <br /><hr />
-            <Footer />
+            <StrictMode>
+                <Router />
+                <Footer />
+            </StrictMode>
         </>
     );
 }

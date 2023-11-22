@@ -1,5 +1,9 @@
 import components from '../components/main';
-import { routeType } from '../types';
+
+type routeType = {
+    path: string;
+    element: JSX.Element;
+}
 
 const routes: routeType[] = [
     {
