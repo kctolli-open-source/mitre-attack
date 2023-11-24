@@ -2,8 +2,8 @@ import React from "react";
 
 const Overview = React.lazy(() => import('../common/Overview'));
 const NextStep = React.lazy(() => import('../common/NextStep'));
-const StepsLinks = React.lazy(() => import('../common/StepsLinks'));
 const BlankATag = React.lazy(() => import('../common/BlankATag'));
+const StepsLinks = React.lazy(() => import('../common/StepsLinks'));
 
 export default function Main() {
     return (
