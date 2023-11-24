@@ -10,11 +10,9 @@ const Footer = lazy(() => import('./common/Footer'));
  */
 export default function App(): ReactElement {
     return (
-        <>
-            <StrictMode>
-                <Router />
-                <Footer />
-            </StrictMode>
-        </>
+        <StrictMode>
+            <Router />
+            <Footer />
+        </StrictMode>
     );
 }
