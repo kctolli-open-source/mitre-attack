@@ -1,9 +1,8 @@
-import React from 'react';
 import steps from '../data/lateralmovement';
 
-const Checklist = React.lazy(() => import('../common/Checklist'));
-const Overview = React.lazy(() => import('../common/Overview'));
-const NextStep = React.lazy(() => import('../common/NextStep'));
+import Checklist from '../common/Checklist';
+import Overview from '../common/Overview';
+import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (

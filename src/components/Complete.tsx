@@ -1,6 +1,4 @@
-import React from "react";
-
-const BlankATag = React.lazy(() => import('../common/BlankATag'));
+import BlankATag from "../common/BlankATag";
 
 export default function Main() {
     const imageLink = "https://media2.giphy.com/media/mGK1g88HZRa2FlKGbz/200.webp?cid=ecf05e47fdfw7zenpr1k5baa6xhqjcfmtb7gu7g9q1ltcjbj&ep=v1_gifs_search&rid=200.webp&ct=g";
