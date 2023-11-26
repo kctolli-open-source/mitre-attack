@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/initialaccess';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Initial Access</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to get into your network.</p>
                         <p>
@@ -18,9 +15,9 @@ export default function Main() {
                             Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/execution" text="Execution" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/execution" text="Execution" />
             </section>
         </>
     );

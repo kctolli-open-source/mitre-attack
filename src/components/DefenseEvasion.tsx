@@ -1,15 +1,13 @@
+import Common from '../common/main';
 import steps from '../data/defenseevasion';
 
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Defense Evasion</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to avoid being detected.</p>
                         <p>
@@ -19,9 +17,9 @@ export default function Main() {
                             Other tactics' techniques are cross-listed here when those techniques include the added benefit of subverting defenses.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/credentialaccess" text="Credential Access" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/credentialaccess" text="Credential Access" />
             </section>
         </>
     );

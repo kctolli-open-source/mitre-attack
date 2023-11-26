@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/discovery';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Discovery</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to figure out your environment.</p>
                         <p>
@@ -19,9 +16,9 @@ export default function Main() {
                             Native operating system tools are often used toward this post-compromise information-gathering objective.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/lateralmovement" text="Lateral Movement" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/lateralmovement" text="Lateral Movement" />
             </section>
         </>
     );

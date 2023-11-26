@@ -1,3 +1,8 @@
+type BlankATagType = {
+    link: string, 
+    text: string
+};
+
 /**
  * Renders a blank Target anchor tag with the specified link and text.
  *
@@ -5,7 +10,7 @@
  * @param {string} text - The text to display within the anchor tag.
  * @return {JSX.Element} - The JSX element representing the anchor tag.
  */
-export default function BlankATag({link, text}: { link: string, text: string }) {
+export default function BlankATag({link, text}: BlankATagType): JSX.Element {
     return (
         <a 
             href={link} 

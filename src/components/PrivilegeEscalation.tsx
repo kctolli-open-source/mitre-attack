@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/privilegeescalation';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Privilege Escalation</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to gain higher-level permissions.</p>
                         <p>
@@ -18,9 +15,9 @@ export default function Main() {
                             Common approaches are to take advantage of system weaknesses, misconfigurations, and vulnerabilities. 
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/defenseevasion" text="Defense Evasion" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/defenseevasion" text="Defense Evasion" />
             </section>
         </>
     );

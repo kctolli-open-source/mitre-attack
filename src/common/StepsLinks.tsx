@@ -5,16 +5,14 @@ import steps from "../data/index";
  *
  * @return {JSX.Element} The rendered StepsLinks component.
  */
-export default function StepsLinks() {
+export default function StepsLinks(): JSX.Element {
     return (
         <article>
             <h3>Steps</h3>
             <ol>
-                {
-                    steps.map(step => (
-                        <li key={step.name}><a href={step.link}>{step.name}</a></li>
-                    ))
-                }
+                {steps.map(step => (
+                    <li key={step?.name}><a href={step?.link}>{step?.name}</a></li>
+                ))}
             </ol>
         </article>
     );

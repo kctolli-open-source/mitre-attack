@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/execution';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Execution</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to run malicious code.</p>
                         <p>
@@ -18,9 +15,9 @@ export default function Main() {
                             For example, an adversary might use a remote access tool to run a PowerShell script that does Remote System Discovery.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/persistence" text="Persistence" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/persistence" text="Persistence" />
             </section>
         </>
     );

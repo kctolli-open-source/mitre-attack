@@ -1,4 +1,4 @@
-import components from '../components/main';
+import components from './components/main';
 
 type routeType = {
     path: string;

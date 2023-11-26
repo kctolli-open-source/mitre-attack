@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/lateralmovement';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Lateral Movements</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to move through your environment.</p>
                         <p>
@@ -19,9 +16,9 @@ export default function Main() {
                             Adversaries might install their own remote access tools to accomplish Lateral Movement or use legitimate credentials with native network and operating system tools, which may be stealthier.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/collection" text="Collection" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/collection" text="Collection" />
             </section>
         </>
     );

@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/exfilration';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Exfiltration</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to steal data.</p>
                         <p>
@@ -19,9 +16,9 @@ export default function Main() {
                             Techniques for getting data out of a target network typically include transferring it over their command and control channel or an alternate channel and may also include putting size limits on the transmission.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/impact" text="Impact" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/impact" text="Impact" />
             </section>
         </>
     );

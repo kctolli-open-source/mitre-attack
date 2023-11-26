@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/collection';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Collection</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to gather data of interest to their goal.</p>
                         <p>
@@ -19,9 +16,9 @@ export default function Main() {
                             Common collection methods include capturing screenshots and keyboard input.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/commandcontrol" text="Command and Control" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/commandcontrol" text="Command and Control" />
             </section>
         </>
     );

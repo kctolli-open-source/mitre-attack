@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/commandcontrol';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Command and Control</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to communicate with compromised systems to control them.</p>
                         <p>
@@ -18,9 +15,9 @@ export default function Main() {
                             There are many ways an adversary can establish command and control with various levels of stealth depending on the victim's network structure and defenses.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/exfiltration" text="Exfiltration" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/exfiltration" text="Exfiltration" />
             </section>
         </>
     );

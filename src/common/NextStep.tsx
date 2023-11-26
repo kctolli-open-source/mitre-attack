@@ -1,5 +1,10 @@
 import { GrLinkNext } from "react-icons/gr";
 
+type NextStepType = {
+    link: string, 
+    text: string, 
+    next?: boolean
+};
 
 /**
  * Renders the NextStep component.
@@ -9,8 +14,8 @@ import { GrLinkNext } from "react-icons/gr";
  * @param {boolean} [next=true] - Indicates whether it is the next step. Default is true.
  * @return {JSX.Element} - The rendered NextStep component.
  */
-export default function NextStep({link, text, next = true}: { link: string, text: string, next?: boolean }) {
-    if (next) text = `Next Step: ${text}`;
+export default function NextStep({link, text, next = true}: NextStepType): JSX.Element {
+    if (next) {text = `Next Step: ${text}`}
     
     return (
         <span key="Next Step" className="next-step">

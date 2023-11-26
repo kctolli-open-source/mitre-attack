@@ -1,15 +1,12 @@
+import Common from '../common/main';
 import steps from '../data/impact';
-
-import Checklist from '../common/Checklist';
-import Overview from '../common/Overview';
-import NextStep from '../common/NextStep';
 
 export default function Main() {
     return (
         <>
             <h2>Impact</h2>
             <section>
-                <Overview>
+                <Common.Overview>
                     <>
                         <p>The adversary is trying to manipulate, interrupt, or destroy your systems and data.</p>
                         <p>
@@ -18,9 +15,9 @@ export default function Main() {
                             These techniques might be used by adversaries to follow through on their end goal or to provide cover for a confidentiality breach.
                         </p>
                     </>
-                </Overview>
-                <Checklist steps={steps} />
-                <NextStep link="/completion" text="Complete" />
+                </Common.Overview>
+                <Common.Checklist steps={steps} />
+                <Common.NextStep link="/completion" text="Complete" />
             </section>
         </>
     );
