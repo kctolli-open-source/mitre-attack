@@ -8,14 +8,14 @@ export default function Main() {
      * @return {JSX.Element} - The rendered steps list component.
      */
     const StepsList = () => (
-        <article>
+        <div>
             <h4>Steps</h4>
             <ol>
                 {steps.map(step => (
                     <li key={step?.name}><a href={step?.link}>{step?.name}</a></li>
                 ))}
             </ol>
-        </article>
+        </div>
     );
 
     return (
