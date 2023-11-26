@@ -17,7 +17,6 @@ export default class Common {
     public static Checklist = React.lazy(() => import('./Checklist'));
     public static NextStep = React.lazy(() => import('./NextStep')); 
     public static Overview = React.lazy(() => import('./Overview'));
-    public static StepsLinks = React.lazy(() => import('./StepsLinks'));
 
     // Misc
     public static year = (new Date()).getFullYear();

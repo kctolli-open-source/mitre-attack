@@ -1,10 +1,9 @@
 #!/bin/bash
 echo "Mitre Attack - Deployment --- `date +%m`/`date +%d`/`date +%Y` `date +%r`"
-
 cd ~/mitre-attack
 
 bun lint
-bun lint --fix
+bun lint:fix
 
 # Git Update
 git status

@@ -7,6 +7,11 @@ import routes from "./routes";
  * @return {JSX.Element} The rendered application component.
  */
 export default function App(): JSX.Element {
+    /**
+     * Renders the footer component.
+     *
+     * @returns {JSX.Element} The JSX element representing the footer.
+     */
     const Footer = (): JSX.Element => (
         <footer>
             <br /><hr />

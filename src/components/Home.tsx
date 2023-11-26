@@ -1,6 +1,23 @@
 import Common from "../common/main";
+import steps from "../data/index";
 
 export default function Main() {
+    /**
+     * Renders a list of steps.
+     *
+     * @return {JSX.Element} - The rendered steps list component.
+     */
+    const StepsList = () => (
+        <article>
+            <h4>Steps</h4>
+            <ol>
+                {steps.map(step => (
+                    <li key={step?.name}><a href={step?.link}>{step?.name}</a></li>
+                ))}
+            </ol>
+        </article>
+    );
+
     return (
         <section>
             <h2>Introduction</h2>
@@ -14,9 +31,9 @@ export default function Main() {
                     <p>
                         Also see <Common.BlankATag link="https://owasp.org/projects/" text="OWASP Projects" /> for examples to test against.
                     </p>
+                    <StepsList />
                 </>
             </Common.Overview>
-            <Common.StepsLinks />
             <Common.NextStep 
                 link="/reconnaissance" 
                 text="Lets Get Started" 
