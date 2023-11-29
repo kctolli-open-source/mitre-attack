@@ -26,7 +26,7 @@ export default function App(): JSX.Element {
 
     return (
         <Common.StrictMode>
-            <Common.Suspense fallback={<div>Loading...</div>}>
+            <Common.Suspense fallback={<h2>Loading...</h2>}>
                 <Common.BrowserRouter>
                     <Common.Routes>
                         {routes.map(route => (
