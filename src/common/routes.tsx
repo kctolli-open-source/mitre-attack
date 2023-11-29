@@ -1,6 +1,6 @@
-import components from './components/main';
+import components from '../components/main';
 
-type routeType = {
+export type routeType = {
     path: string;
     element: JSX.Element;
 }

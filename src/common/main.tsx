@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 
 import StepsList from "./StepsList";
+import routes from "./routes";
 
 export default class Common {
     // React
@@ -24,7 +25,49 @@ export default class Common {
     public static Overview = React.lazy(() => import('./Overview'));
     public static StepsList = StepsList;
 
+    /**
+     * Renders the Router component.
+     *
+     * @returns {JSX.Element} The JSX element representing the Router.
+     */
+     
+    public static Router = (): JSX.Element => {
+        return (
+            <React.Suspense fallback={<h2>Loading...</h2>}>
+                <BrowserRouter>
+                    <Routes>
+                        {routes.map(route => (
+                            <Route 
+                                key={route?.path} 
+                                path={route?.path} 
+                                element={route?.element} 
+                            />
+                        ))}
+                    </Routes>
+                </BrowserRouter>
+            </React.Suspense>
+        );
+    }
+
+    /**
+     * Renders the footer component.
+     *
+     * @returns {JSX.Element} The JSX element representing the footer.
+     */
+    public static Footer = (): JSX.Element => (
+        <footer>
+            <br /><hr />
+            &copy; {Common.year} Kyle Tolliver - <a href="/">Security Attack</a>
+            <br /> 
+            All rights reserved - <Common.BlankATag 
+                link="https://attack.mitre.org" 
+                text="MITRE ATT&CK" 
+            />
+        </footer>
+    );
+
     // Misc
+    public static routes = routes;
     public static year = (new Date()).getFullYear();
     public static imageLink = "https://media2.giphy.com/media/mGK1g88HZRa2FlKGbz/200.webp?cid=ecf05e47fdfw7zenpr1k5baa6xhqjcfmtb7gu7g9q1ltcjbj&ep=v1_gifs_search&rid=200.webp&ct=g";
 }
