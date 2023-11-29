@@ -23,10 +23,7 @@ export default function Main() {
                         The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.
                     </p>
                     <p>
-                        MITRE ATT&CK® Framework contains 14 techniques and tactics, and is used to test adversary tactics and techniques against adversary targets. 
-                    </p>
-                    <p>
-                        To view the steps click: <Btn />
+                        MITRE ATT&CK® Framework contains 14 techniques and tactics. To view the steps click: <Btn />
                     </p>
                     { showSteps && <Common.StepsList /> }
                 </>
