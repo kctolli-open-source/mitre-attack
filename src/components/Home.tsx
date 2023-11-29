@@ -1,21 +1,15 @@
 import Common from "../common/main";
-import steps from "../data/index";
 
 export default function Main() {
-    /**
-     * Renders a list of steps.
-     *
-     * @return {JSX.Element} - The rendered steps list component.
-     */
-    const StepsList = () => (
-        <div>
-            <h4>Steps</h4>
-            <ol>
-                {steps.map(step => (
-                    <li key={step?.name}><a href={step?.link}>{step?.name}</a></li>
-                ))}
-            </ol>
-        </div>
+    const [showSteps, setShowSteps] = Common.useState(false);
+
+    const Btn = () => (
+        <button 
+            onClick={() => setShowSteps(showSteps ? false : true)} 
+            id="show-steps"
+        >
+            here
+        </button> 
     );
 
     return (
@@ -29,11 +23,20 @@ export default function Main() {
                         The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.
                     </p>
                     <p>
-                        Also see <Common.BlankATag link="https://owasp.org/projects/" text="OWASP Projects" /> for examples to test against.
+                        MITRE ATT&CK® Framework contains 14 techniques and tactics, and is used to test adversary tactics and techniques against adversary targets. 
                     </p>
-                    <StepsList />
+                    <p>
+                        To view the steps click: <Btn />
+                    </p>
+                    { showSteps && <Common.StepsList /> }
                 </>
             </Common.Overview>
+            <article>
+                <h3>Additional Info</h3>
+                <p>
+                    Also see <Common.BlankATag link="https://owasp.org/projects/" text="OWASP Projects" /> for examples to test against.
+                </p>
+            </article>
             <Common.NextStep 
                 link="/reconnaissance" 
                 text="Lets Get Started" 

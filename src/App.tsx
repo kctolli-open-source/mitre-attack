@@ -26,17 +26,19 @@ export default function App(): JSX.Element {
 
     return (
         <Common.StrictMode>
-            <Common.BrowserRouter>
-                <Common.Routes>
-                    {routes.map(route => (
-                        <Common.Route 
-                            key={route?.path} 
-                            path={route?.path} 
-                            element={route?.element} 
-                        />
-                    ))}
-                </Common.Routes>
-            </Common.BrowserRouter>
+            <Common.Suspense fallback={<div>Loading...</div>}>
+                <Common.BrowserRouter>
+                    <Common.Routes>
+                        {routes.map(route => (
+                            <Common.Route 
+                                key={route?.path} 
+                                path={route?.path} 
+                                element={route?.element} 
+                            />
+                        ))}
+                    </Common.Routes>
+                </Common.BrowserRouter>
+            </Common.Suspense>
             <Footer />
         </Common.StrictMode>
     );

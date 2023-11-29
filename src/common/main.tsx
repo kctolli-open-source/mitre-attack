@@ -6,6 +6,9 @@ export default class Common {
     public static React = React;
     public static lazy = React.lazy;
     public static StrictMode = React.StrictMode; 
+    public static useState = React.useState;
+    public static useEffect = React.useEffect;
+    public static Suspense = React.Suspense;
 
     // React Router Dom
     public static BrowserRouter = BrowserRouter;
@@ -17,6 +20,7 @@ export default class Common {
     public static Checklist = React.lazy(() => import('./Checklist'));
     public static NextStep = React.lazy(() => import('./NextStep')); 
     public static Overview = React.lazy(() => import('./Overview'));
+    public static StepsList = React.lazy(() => import('./StepsList'));
 
     // Misc
     public static year = (new Date()).getFullYear();
