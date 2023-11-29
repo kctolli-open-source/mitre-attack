@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 
+import StepsList from "./StepsList";
+
 export default class Common {
     // React
     public static React = React;
@@ -20,7 +22,7 @@ export default class Common {
     public static Checklist = React.lazy(() => import('./Checklist'));
     public static NextStep = React.lazy(() => import('./NextStep')); 
     public static Overview = React.lazy(() => import('./Overview'));
-    public static StepsList = React.lazy(() => import('./StepsList'));
+    public static StepsList = StepsList;
 
     // Misc
     public static year = (new Date()).getFullYear();
