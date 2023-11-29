@@ -1,8 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 
-import StepsList from "./StepsList";
 import routes from "./routes";
+
+import BlankATag from "./BlankATag";
+import Checklist from "./Checklist";
+import NextStep from "./NextStep";
+import Overview from "./Overview";
+import StepsList from "./StepsList";
 
 export default class Common {
     // React
@@ -19,10 +24,10 @@ export default class Common {
     public static Route = Route;
 
     // Common Components
-    public static BlankATag = React.lazy(() => import('./BlankATag'));
-    public static Checklist = React.lazy(() => import('./Checklist'));
-    public static NextStep = React.lazy(() => import('./NextStep')); 
-    public static Overview = React.lazy(() => import('./Overview'));
+    public static BlankATag = BlankATag;
+    public static Checklist = Checklist;
+    public static NextStep = NextStep; 
+    public static Overview = Overview;
     public static StepsList = StepsList;
 
     /**
