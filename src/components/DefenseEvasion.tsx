@@ -1,13 +1,14 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/defenseevasion';
 
 
 export default function Main() {
     return (
-        <>
-            <h2>Defense Evasion</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Defense Evasion",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to avoid being detected.</p>
                         <p>
@@ -16,11 +17,12 @@ export default function Main() {
                             Adversaries also leverage and abuse trusted processes to hide and masquerade their malware. 
                             Other tactics' techniques are cross-listed here when those techniques include the added benefit of subverting defenses.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/credentialaccess", text: "Credential Access"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/credentialaccess",
+                    text: "Credential Access"
+                }
+            }}
+        />
     );
 }

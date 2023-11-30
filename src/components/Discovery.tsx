@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/discovery';
 
 export default function Main() {
     return (
-        <>
-            <h2>Discovery</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Discovery",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to figure out your environment.</p>
                         <p>
@@ -15,11 +16,12 @@ export default function Main() {
                             They also allow adversaries to explore what they can control and what's around their entry point in order to discover how it could benefit their current objective. 
                             Native operating system tools are often used toward this post-compromise information-gathering objective.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/lateralmovement", text:"Lateral Movement"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/lateralmovement",
+                    text: "Lateral Movement"
+                }
+            }}
+        />
     );
 }

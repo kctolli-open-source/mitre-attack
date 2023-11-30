@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/lateralmovement';
 
 export default function Main() {
     return (
-        <>
-            <h2>Lateral Movements</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Lateral Movements",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to move through your environment.</p>
                         <p>
@@ -15,11 +16,12 @@ export default function Main() {
                             Reaching their objective often involves pivoting through multiple systems and accounts to gain. 
                             Adversaries might install their own remote access tools to accomplish Lateral Movement or use legitimate credentials with native network and operating system tools, which may be stealthier.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/collection", text: "Collection"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/collection",
+                    text: "Collection"
+                }
+            }}
+        />
     );
 }

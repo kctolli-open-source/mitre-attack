@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/credentialaccess';
 
 export default function Main() {
     return (
-        <>
-            <h2>Credential Access</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Credential Access",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to steal account names and passwords.</p>
                         <p>
@@ -14,11 +15,12 @@ export default function Main() {
                             Techniques used to get credentials include keylogging or credential dumping. 
                             Using legitimate credentials can give adversaries access to systems, make them harder to detect, and provide the opportunity to create more accounts to help achieve their goals.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/discovery", text: "Discovery"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/discovery",
+                    text: "Discovery"
+                }
+            }}
+        />
     );
 }

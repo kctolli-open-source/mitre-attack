@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/collection';
 
 export default function Main() {
     return (
-        <>
-            <h2>Collection</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Collection",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to gather data of interest to their goal.</p>
                         <p>
@@ -15,11 +16,12 @@ export default function Main() {
                             Common target sources include various drive types, browsers, audio, video, and email. 
                             Common collection methods include capturing screenshots and keyboard input.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/commandcontrol", text: "Command and Control"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/commandcontrol",
+                    text: "Command and Control"
+                }
+            }}
+        />
     );
 }

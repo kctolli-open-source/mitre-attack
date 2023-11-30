@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/exfilration';
 
 export default function Main() {
     return (
-        <>
-            <h2>Exfiltration</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Exfiltration",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to steal data.</p>
                         <p>
@@ -15,11 +16,12 @@ export default function Main() {
                             This can include compression and encryption. 
                             Techniques for getting data out of a target network typically include transferring it over their command and control channel or an alternate channel and may also include putting size limits on the transmission.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/impact", text: "Impact"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/impact",
+                    text: "Impact"
+                }
+            }}
+        />
     );
 }

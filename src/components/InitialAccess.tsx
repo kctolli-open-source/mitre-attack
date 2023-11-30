@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/initialaccess';
 
 export default function Main() {
     return (
-        <>
-            <h2>Initial Access</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Initial Access",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to get into your network.</p>
                         <p>
@@ -14,11 +15,12 @@ export default function Main() {
                             Techniques used to gain a foothold include targeted spearphishing and exploiting weaknesses on public-facing web servers. 
                             Footholds gained through initial access may allow for continued access, like valid accounts and use of external remote services, or may be limited-use due to changing passwords.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/execution", text: "Execution"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/execution",
+                    text: "Execution"
+                }
+            }}
+        />
     );
 }

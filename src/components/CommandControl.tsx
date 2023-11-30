@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/commandcontrol';
 
 export default function Main() {
     return (
-        <>
-            <h2>Command and Control</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Command and Control",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to communicate with compromised systems to control them.</p>
                         <p>
@@ -14,11 +15,12 @@ export default function Main() {
                             Adversaries commonly attempt to mimic normal, expected traffic to avoid detection. 
                             There are many ways an adversary can establish command and control with various levels of stealth depending on the victim's network structure and defenses.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/exfiltration", text: "Exfiltration"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/exfiltration",
+                    text: "Exfiltration"
+                }
+            }}
+        />
     );
 }

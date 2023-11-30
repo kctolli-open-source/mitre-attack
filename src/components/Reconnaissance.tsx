@@ -1,12 +1,13 @@
-import Common from '../common/main';
+import ComponentBuilder from '../common/ComponentBuilder';
 import steps from '../data/reconnaissance';
 
 export default function Main() {
     return (
-        <>
-            <h2>Reconnaissance</h2>
-            <section>
-                <Common.Overview>
+        <ComponentBuilder 
+            props={{
+                title: "Reconnaissance",
+                steps: steps,
+                children: 
                     <>
                         <p>The adversary is trying to gather information they can use to plan future operations.</p>
                         <p>
@@ -14,11 +15,12 @@ export default function Main() {
                             Such information may include details of the victim organization, infrastructure, or staff/personnel. 
                             This information can be leveraged by the adversary to aid in other phases of the adversary lifecycle, such as using gathered information to plan and execute Initial Access, to scope and prioritize post-compromise objectives, or to drive and lead further Reconnaissance efforts.
                         </p>
-                    </>
-                </Common.Overview>
-                <Common.Checklist steps={steps} />
-                <Common.NextStep props={{link: "/resourcedevelopment", text: "Resource Development"}} />
-            </section>
-        </>
+                    </>,
+                next: {
+                    link: "/resourcedevelopment",
+                    text: "Resource Development"
+                }
+            }}
+        />
     );
 }
