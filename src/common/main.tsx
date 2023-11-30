@@ -7,7 +7,6 @@ import BlankATag from "./BlankATag";
 import Checklist from "./Checklist";
 import NextStep from "./NextStep";
 import Overview from "./Overview";
-import StepsList from "./StepsList";
 import Footer from "./Footer";
 
 export default class Common {
@@ -29,14 +28,12 @@ export default class Common {
     public static Footer = Footer;
     public static NextStep = NextStep; 
     public static Overview = Overview;
-    public static StepsList = StepsList;
 
     /**
      * Renders the Router component.
      *
      * @returns {JSX.Element} The JSX element representing the Router.
      */
-     
     public static Router = (): JSX.Element => {
         return (
             <React.Suspense fallback={<h2>Loading...</h2>}>

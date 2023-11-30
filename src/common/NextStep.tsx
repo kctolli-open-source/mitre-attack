@@ -1,8 +1,10 @@
 import { GrLinkNext } from "react-icons/gr";
 
 type NextStepType = {
-    link: string, 
-    text: string, 
+    props: {
+        link: string, 
+        text: string, 
+    },
     next?: boolean
 };
 
@@ -14,12 +16,12 @@ type NextStepType = {
  * @param {boolean} [next=true] - Indicates whether it is the next step. Default is true.
  * @return {JSX.Element} - The rendered NextStep component.
  */
-export default function NextStep({link, text, next = true}: NextStepType): JSX.Element {
-    if (next) {text = `Next Step: ${text}`}
+export default function NextStep({props, next = true}: NextStepType): JSX.Element {
+    if (next) {props.text = `Next Step: ${props.text}`}
     
     return (
         <span key="Next Step" className="next-step">
-            <a href={link}>{text}</a>
+            <a href={props.link}>{props.text}</a>
             <GrLinkNext />
         </span>
     );

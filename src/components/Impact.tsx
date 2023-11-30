@@ -17,7 +17,7 @@ export default function Main() {
                     </>
                 </Common.Overview>
                 <Common.Checklist steps={steps} />
-                <Common.NextStep link="/completion" text="Complete" />
+                <Common.NextStep props={{link: "/completion", text: "Complete"}} />
             </section>
         </>
     );

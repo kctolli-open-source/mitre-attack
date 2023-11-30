@@ -5,10 +5,7 @@ export default function Main() {
         <>
             <h2>Complete</h2>
             <section>
-                <img 
-                    src={Common.imageLink}
-                    alt="Complete"
-                />
+                <img src={Common.imageLink} alt="Complete" />
 
                 <p>
                     Congrats you have completed the MITRE ATT&CK framework. <br />
