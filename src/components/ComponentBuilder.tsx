@@ -3,7 +3,7 @@ import { componentBuilderType } from "../type";
 
 /**
  * Builds Components for each route.
- * Dependent on GrLinkNext
+ * Dependent on react-icons.GrLinkNext
  * 
  * @param props the data for the component
  * @returns {JSX.Element} The JSX element representing the Component.

@@ -6,7 +6,8 @@ import Components from "./Components";
 
 /**
  * Renders the router component.
- * Dependent on Suspense, BrowserRouter, Routes, and Route 
+ * Dependent on React.Suspense, React.memo, 
+ * React-Router.BrowserRouter, React-Router.Routes, and React-Router.Route 
  * Data from Components class
  *
  * @return {JSX.Element} The router component.

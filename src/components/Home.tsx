@@ -6,7 +6,7 @@ import steps from "../data/index";
 
 /**
  * Renders the Home component.
- * Dependent on useState and GrLinkNext
+ * Dependent on React.useState and react-icons.GrLinkNext
  *
  * @return {JSX.Element} The JSX element representing the Home component.
  */
@@ -36,9 +36,11 @@ export default function Home(): JSX.Element {
             </article>
             <article>
                 <h3>Additional Info</h3>
-                <p>Also see <BlankATag link="https://owasp.org/projects/" text="OWASP Projects" /> for examples to test against.</p>
+                <ul>
+                    <li><BlankATag link="https://owasp.org/projects/" text="OWASP Projects" /> for examples to test against.</li>
+                </ul>
             </article>
-            <span key="Next Step" className="next-step">
+            <span key="Get Started" className="next-step">
                 <a href="/reconnaissance">Lets Get Started</a>
                 <GrLinkNext />
             </span>
