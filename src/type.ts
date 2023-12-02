@@ -11,6 +11,16 @@ export type componentBuilderType = {
     }
 }
 
+export type dataType = {
+    title: string;
+    steps: string[];
+    next: {
+        link: string;
+        text: string;
+    };
+    children: JSX.Element;
+}
+
 export type routeType = {
     path: string;
     element: JSX.Element;
@@ -24,14 +34,4 @@ export type BlankATagType = {
 export type indexType = {
     link: string;
     name: string;
-}
-
-export type dataType = {
-    title: string;
-    steps: string[];
-    next: {
-        link: string;
-        text: string;
-    };
-    children: JSX.Element;
 }

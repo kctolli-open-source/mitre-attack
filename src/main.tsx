@@ -1,13 +1,9 @@
-import { createRoot } from 'react-dom/client';
-import { StrictMode } from 'react';
-
-import Footer from './components/Footer';
-import Router from './components/Router';
+import Components from './components/main';
 
 const root = document.getElementById('root');
-createRoot(root!).render(
-    <StrictMode>
-        <Router />
-        <Footer />
-    </StrictMode>
+Components.createRoot(root!).render(
+    <Components.StrictMode>
+        <Components.Router />
+        <Components.Footer />
+    </Components.StrictMode>
 );

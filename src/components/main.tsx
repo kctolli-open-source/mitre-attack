@@ -1,14 +1,36 @@
-import { lazy } from 'react';
+ 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Suspense, StrictMode, lazy, memo } from 'react';
+import { createRoot } from 'react-dom/client';
 
 import { routeType } from '../type';
 import Data from '../data/main';
 
 export default class Components {
-    public static readonly ComponentBuilder = lazy(() => import('./ComponentBuilder'));
-    public static readonly Complete = lazy(() => import('./Complete')); 
-    public static readonly Index = lazy(() => import('./Home'));
+    public static readonly createRoot = createRoot;
+    public static readonly StrictMode = StrictMode;
 
-    public static readonly routes: routeType[] = [
+    private static readonly ComponentBuilder = lazy(() => import('./ComponentBuilder'));
+    private static readonly Complete = lazy(() => import('./Complete')); 
+    private static readonly Index = lazy(() => import('./Home'));
+
+    private static readonly RouteBuilder = (): JSX.Element => (
+        <Suspense fallback={<h2>Loading ...</h2>}>
+            <BrowserRouter>
+                <Routes>
+                    {Components?.routes.map(route => (
+                        <Route 
+                            key={route?.path} 
+                            path={route?.path} 
+                            element={route?.element} 
+                        />
+                    ))}
+                </Routes>
+            </BrowserRouter>
+        </Suspense>
+    );
+
+    private static readonly routes: routeType[] = [
         {
             path: "*",
             element: <Components.Index />
@@ -73,5 +95,8 @@ export default class Components {
             path: "completion",
             element: <Components.Complete />
         }
-    ]
+    ];
+
+    public static readonly Footer = lazy(() => import('./Footer'));
+    public static readonly Router = memo(Components.RouteBuilder);
 }
