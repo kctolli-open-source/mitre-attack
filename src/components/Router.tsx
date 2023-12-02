@@ -1,14 +1,21 @@
 /* eslint-disable react-refresh/only-export-components */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React from "react";
+import { Suspense, memo } from "react";
 
-import routes from "./routes";
+import Components from "./Components";
 
-const Router = () => (
-    <React.Suspense fallback={<h2>Loading...</h2>}>
+/**
+ * Renders the router component.
+ * Dependent on Suspense, BrowserRouter, Routes, and Route 
+ * Data from Components class
+ *
+ * @return {JSX.Element} The router component.
+ */
+const Router = (): JSX.Element => (
+    <Suspense fallback={<h2>Loading...</h2>}>
         <BrowserRouter>
             <Routes>
-                {routes.map(route => (
+                {Components?.routes.map(route => (
                     <Route 
                         key={route?.path} 
                         path={route?.path} 
@@ -17,7 +24,7 @@ const Router = () => (
                 ))}
             </Routes>
         </BrowserRouter>
-    </React.Suspense>
+    </Suspense>
 );
 
-export default React.memo(Router);
+export default memo(Router);

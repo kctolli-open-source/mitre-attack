@@ -1,9 +1,15 @@
 /* eslint-disable react-refresh/only-export-components */
 import { memo } from "react";
 
-import BlankATag from '../common/BlankATag';
+import BlankATag from './BlankATag';
 
-const Footer = () => (
+/**
+ * Renders the footer component
+ * Dependent on React.memo
+ *
+ * @returns {JSX.Element} The JSX element representing the footer.
+ */
+const Footer = (): JSX.Element => (
     <footer>
         <br /><hr />
         &copy; {(new Date()).getFullYear()} Kyle Tolliver - <a href="/">Security Attack</a>

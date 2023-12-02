@@ -1,6 +1,11 @@
-import BlankATag from "../common/BlankATag";
+import BlankATag from "./BlankATag";
 
-export default function Main() {
+/**
+ * Renders the Complete component.
+ * 
+ * @return {JSX.Element} The rendered Complete component.
+ */
+export default function Complete(): JSX.Element {
     const imageLink = "https://media2.giphy.com/media/mGK1g88HZRa2FlKGbz/200.webp?cid=ecf05e47fdfw7zenpr1k5baa6xhqjcfmtb7gu7g9q1ltcjbj&ep=v1_gifs_search&rid=200.webp&ct=g";
     return (
         <>

@@ -1,10 +1,17 @@
 import { GrLinkNext } from "react-icons/gr";
-import BlankATag from "../common/BlankATag";
-import steps from "../data/index";
-import React from "react";
+import { useState } from "react";
 
-export default function Main() {
-    const [showSteps, setShowSteps] = React.useState(false);
+import BlankATag from "./BlankATag";
+import steps from "../data/index";
+
+/**
+ * Renders the Home component.
+ * Dependent on useState and GrLinkNext
+ *
+ * @return {JSX.Element} The JSX element representing the Home component.
+ */
+export default function Home(): JSX.Element {
+    const [showSteps, setShowSteps] = useState(false);
 
     return (
         <section>

@@ -1,13 +1,13 @@
-import ReactDOM from 'react-dom/client';
-import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { StrictMode } from 'react';
 
 import Footer from './components/Footer';
 import Router from './components/Router';
 
 const root = document.getElementById('root');
-ReactDOM.createRoot(root!).render(
-    <React.StrictMode>
+createRoot(root!).render(
+    <StrictMode>
         <Router />
         <Footer />
-    </React.StrictMode>
+    </StrictMode>
 );

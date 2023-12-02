@@ -1,7 +1,4 @@
-type indexType = {
-    name: string;
-    link: string;
-}
+import { indexType } from '../type';
 
 const steps: indexType[] = [
     {
