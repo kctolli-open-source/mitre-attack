@@ -6,13 +6,11 @@ import BlankATag from "./BlankATag";
  * 
  * @return {JSX.Element} The rendered Complete component.
  */
-export default function Complete({imageLink}: {imageLink: string}): JSX.Element {
+export default function Complete(): JSX.Element {
     return (
         <>
             <h2>Complete</h2>
             <section>
-                <img src={imageLink} alt="Complete" />
-
                 <p>
                     Congrats you have completed the MITRE ATT&CK framework. <br />
                     For more information on MITRE ATT&CK visit: <BlankATag link="https://attack.mitre.org" text="attack.mitre.org" />.

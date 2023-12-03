@@ -6,8 +6,6 @@ import { createRoot } from 'react-dom/client';
 import { routeType } from '../type';
 import Data from '../data/main';
 
-const imageLink = "https://media2.giphy.com/media/mGK1g88HZRa2FlKGbz/200.webp?cid=ecf05e47fdfw7zenpr1k5baa6xhqjcfmtb7gu7g9q1ltcjbj&ep=v1_gifs_search&rid=200.webp&ct=g";
-
 export default class Components {
     public static readonly createRoot = createRoot;
     public static readonly StrictMode = StrictMode;
@@ -95,7 +93,7 @@ export default class Components {
         },
         {
             path: "complete",
-            element: <Components.Complete imageLink={imageLink} />
+            element: <Components.Complete />
         }
     ];
 
