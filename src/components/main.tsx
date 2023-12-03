@@ -14,6 +14,8 @@ export default class Components {
     private static readonly Complete = lazy(() => import('./Complete')); 
     private static readonly Index = lazy(() => import('./Home'));
 
+    private static readonly imageLink = "https://media2.giphy.com/media/mGK1g88HZRa2FlKGbz/200.webp?cid=ecf05e47fdfw7zenpr1k5baa6xhqjcfmtb7gu7g9q1ltcjbj&ep=v1_gifs_search&rid=200.webp&ct=g";
+
     private static readonly RouteBuilder = (): JSX.Element => (
         <Suspense fallback={<h2>Loading ...</h2>}>
             <BrowserRouter>
@@ -93,7 +95,7 @@ export default class Components {
         },
         {
             path: "completion",
-            element: <Components.Complete />
+            element: <Components.Complete imageLink={Components.imageLink} />
         }
     ];
 

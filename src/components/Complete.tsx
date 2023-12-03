@@ -6,8 +6,7 @@ import BlankATag from "./BlankATag";
  * 
  * @return {JSX.Element} The rendered Complete component.
  */
-export default function Complete(): JSX.Element {
-    const imageLink = "https://media2.giphy.com/media/mGK1g88HZRa2FlKGbz/200.webp?cid=ecf05e47fdfw7zenpr1k5baa6xhqjcfmtb7gu7g9q1ltcjbj&ep=v1_gifs_search&rid=200.webp&ct=g";
+export default function Complete({imageLink}: {imageLink: string}): JSX.Element {
     return (
         <>
             <h2>Complete</h2>
@@ -19,7 +18,6 @@ export default function Complete(): JSX.Element {
                     For more information on MITRE ATT&CK visit: <BlankATag link="https://attack.mitre.org" text="attack.mitre.org" />.
                 </p>
 
-                <a href="/"> Go Home </a>
                 <AdditionalInfo />
             </section>
         </>
