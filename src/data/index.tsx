@@ -56,7 +56,11 @@ const steps: indexType[] = [
     {
         name: 'Impact',
         link: 'impact',
-    }
+    },
+    {
+        name: 'Complete and Review',
+        link: 'complete',
+    },
 ];
 
 export default steps;

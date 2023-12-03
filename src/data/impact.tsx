@@ -19,7 +19,7 @@ const data: dataType = {
         'System Shutdown / Reboot',
     ],
     next: {
-        link: "/completion",
+        link: "/complete",
         text: "Complete"
     },  
     children: 

@@ -18,6 +18,17 @@ export default function Complete({imageLink}: {imageLink: string}): JSX.Element 
                     For more information on MITRE ATT&CK visit: <BlankATag link="https://attack.mitre.org" text="attack.mitre.org" />.
                 </p>
 
+                <article>
+                    <h3>Review</h3>
+                    <p>Now that you have completed the framework lets review the outcomes.</p>
+                    <ul>
+                        <li>What vulnerabilities did you discover?</li>
+                        <li>Based on what you learned, what improvements to your platform should be made?</li>
+                        <li>What technique was the most insightful to you?</li>
+                        <li>In future, what would you do differently when following this framework?</li>
+                    </ul>
+                </article>
+
                 <AdditionalInfo />
             </section>
         </>
