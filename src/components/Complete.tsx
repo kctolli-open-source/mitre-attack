@@ -1,3 +1,4 @@
+import AdditionalInfo from "./AdditionalInfo";
 import BlankATag from "./BlankATag";
 
 /**
@@ -19,6 +20,7 @@ export default function Complete(): JSX.Element {
                 </p>
 
                 <a href="/"> Go Home </a>
+                <AdditionalInfo />
             </section>
         </>
     );
