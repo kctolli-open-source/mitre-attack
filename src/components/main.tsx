@@ -1,36 +1,18 @@
- 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Suspense, StrictMode, lazy, memo } from 'react';
-import { createRoot } from 'react-dom/client';
-
+import React from 'react';
 import { routeType } from '../type';
 import Data from '../data/main';
 
 export default class Components {
-    public static readonly createRoot = createRoot;
-    public static readonly StrictMode = StrictMode;
+    public static readonly StrictMode = React.StrictMode;
+    public static readonly Suspense = React.Suspense;
+    public static readonly memo = React.memo;
 
-    private static readonly ComponentBuilder = lazy(() => import('./ComponentBuilder'));
-    private static readonly Complete = lazy(() => import('./Complete')); 
-    private static readonly Index = lazy(() => import('./Home'));
+    private static readonly ComponentBuilder = React.lazy(() => import('./ComponentBuilder'));
+    private static readonly Complete = React.lazy(() => import('./Complete')); 
+    private static readonly Index = React.lazy(() => import('./Home'));
+    public  static readonly Footer = React.lazy(() => import('./Footer'));
 
-    private static readonly RouteBuilder = (): JSX.Element => (
-        <Suspense fallback={<h2>Loading ...</h2>}>
-            <BrowserRouter>
-                <Routes>
-                    {Components?.routes.map(route => (
-                        <Route 
-                            key={route?.path} 
-                            path={route?.path} 
-                            element={route?.element} 
-                        />
-                    ))}
-                </Routes>
-            </BrowserRouter>
-        </Suspense>
-    );
-
-    private static readonly routes: routeType[] = [
+    public static readonly routes: routeType[] = [
         {
             path: "*",
             element: <Components.Index />
@@ -96,7 +78,4 @@ export default class Components {
             element: <Components.Complete />
         }
     ];
-
-    public static readonly Footer = lazy(() => import('./Footer'));
-    public static readonly Router = memo(Components.RouteBuilder);
 }
