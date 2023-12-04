@@ -1,9 +1,10 @@
+"use client";
 import { GrLinkNext } from "react-icons/gr";
 import { useState } from "react";
 
 import AdditionalInfo from "./AdditionalInfo";
 import BlankATag from "./BlankATag";
-import steps from "../data/index";
+import steps from "./data/index";
 
 /**
  * Renders the Home component.

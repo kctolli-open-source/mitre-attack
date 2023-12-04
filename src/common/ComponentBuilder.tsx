@@ -1,5 +1,5 @@
 import { GrLinkNext } from "react-icons/gr";
-import { componentBuilderType } from "../type";
+import { componentBuilderType } from "./type";
 
 /**
  * Builds Components for each route.

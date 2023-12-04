@@ -1,6 +1,5 @@
-/* eslint-disable react-refresh/only-export-components */
 import { memo } from "react";
-import { BlankATagType } from "../type";
+import { BlankATagType } from "./type";
 
 /**
  * Renders a blank Target anchor tag with the specified link and text.

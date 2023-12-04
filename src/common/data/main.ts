@@ -1,17 +1,17 @@
-import collection from '../data/collection';
-import commandcontrol from '../data/commandcontrol';
-import credentialaccess from '../data/credentialaccess';
-import defenseevasion from '../data/defenseevasion';
-import discovery from '../data/discovery';  
-import execution from '../data/execution';
-import exfilration from '../data/exfilration';
-import impact from '../data/impact';
-import initialaccess from '../data/initialaccess';
-import lateralmovement from '../data/lateralmovement';
-import persistence from '../data/persistence';
-import privilegeescalation from '../data/privilegeescalation';
-import reconnaissance from '../data/reconnaissance';
-import resourcedevelopment from '../data/resourcedevelopment';
+import collection from './collection';
+import commandcontrol from './commandcontrol';
+import credentialaccess from './credentialaccess';
+import defenseevasion from './defenseevasion';
+import discovery from './discovery';  
+import execution from './execution';
+import exfilration from './exfilration';
+import impact from './impact';
+import initialaccess from './initialaccess';
+import lateralmovement from './lateralmovement';
+import persistence from './persistence';
+import privilegeescalation from './privilegeescalation';
+import reconnaissance from './reconnaissance';
+import resourcedevelopment from './resourcedevelopment';
 
 export default class Data {
     public static readonly collection = collection;
