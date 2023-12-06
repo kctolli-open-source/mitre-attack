@@ -30,5 +30,3 @@ const data: dataType = {
 };
 
 export default data;
-
-

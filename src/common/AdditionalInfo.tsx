@@ -1,4 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
 import { memo } from "react";
 import BlankATag from "./BlankATag";
 

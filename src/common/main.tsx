@@ -1,16 +1,15 @@
-import React from 'react';
-import { routeType } from '../type';
-import Data from '../data/main';
+import dynamic from 'next/dynamic';
+
+import { routeType } from './type';
+import Data from './data/main';
 
 export default class Components {
-    public static readonly StrictMode = React.StrictMode;
-    public static readonly Suspense = React.Suspense;
-    public static readonly memo = React.memo;
-
-    private static readonly ComponentBuilder = React.lazy(() => import('./ComponentBuilder'));
-    private static readonly Complete = React.lazy(() => import('./Complete')); 
-    private static readonly Index = React.lazy(() => import('./Home'));
-    public  static readonly Footer = React.lazy(() => import('./Footer'));
+    private static readonly ComponentBuilder = dynamic(() => import('./ComponentBuilder'));
+    private static readonly Complete = dynamic(() => import('./Complete')); 
+    private static readonly Index = dynamic(() => import('./Home'));
+    
+    public static readonly Router = dynamic(() => import('./Router'), {ssr: false});
+    public static readonly Footer = dynamic(() => import('./Footer'));
 
     public static readonly routes: routeType[] = [
         {
