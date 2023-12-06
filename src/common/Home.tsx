@@ -26,7 +26,7 @@ export default function Home(): JSX.Element {
                     The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.
                 </p>
                 <p>
-                    MITRE ATT&CK® Framework contains 14 techniques and tactics. To view the steps click: <button onClick={() => setShowSteps(showSteps ? false : true)}>here</button>
+                    MITRE ATT&CK® Framework contains 14 techniques and tactics. To view the techniques click: <button onClick={() => setShowSteps(showSteps ? false : true)}>here</button>
                 </p>
                 { 
                     showSteps && 
