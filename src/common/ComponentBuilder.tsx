@@ -11,27 +11,24 @@ import { componentBuilderType } from "./type";
  * @returns {JSX.Element} The JSX element representing the Component.
  */
 const ComponentBuilder = ({props}: componentBuilderType): JSX.Element => {
+    const Overview = dynamic(() => import('./Overview'));
     const NextStep = dynamic(() => import('./NextStep'));
-    props.next.text = `Next Step: ${props.next.text}`;
+    const Steps = dynamic(() => import('./Steps'));
 
     return (
         <>
             <h2>{props.title}</h2>
             <section>
-                <article>
-                    <h3>Overview</h3>
+                <Overview>
                     {props.children}
-                </article>
-                <article key="steps">
-                    <h3>Steps</h3>
-                    {props?.steps.map((name: string) => (
-                        <div key={name} id={name}>
-                            <input type="checkbox" name={name} value={name} />
-                            <label htmlFor={name}> {name} </label>
-                        </div>
-                    ))}
-                </article>
-                <NextStep next={props.next}/>
+                </Overview>
+                <Steps steps={props.steps} />
+                <NextStep 
+                    next={{
+                        link: props.next.link,
+                        text: `Next Step: ${props.next.text}`
+                    }}
+                />
             </section>
         </>
     );

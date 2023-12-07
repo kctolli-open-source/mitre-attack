@@ -1,31 +1,22 @@
-"use client";
-
-import { useState, memo } from "react";
+import { memo } from "react";
 
 /**
- * Renders a component that displays a list of steps.
- * Dependent on React.useState and React.memo
+ * Render a list of steps.
+ * Dependent on React.memo
  *
- * @param {object[]} steps - An array of steps to be displayed.
- * @return {React.ReactNode} The rendered component.
+ * @param {Array} steps - An array of steps to render.
+ * @return {JSX.Element} - The rendered list of steps.
  */
-const Steps = ({steps}: {steps: any[]}) => {
-    const [showSteps, setShowSteps] = useState(false);
-
-    return (
-        <>
-            <p>
-                MITRE ATT&CK® Framework contains 14 techniques and tactics. To view the techniques click: <button onClick={() => setShowSteps(showSteps ? false : true)}>here</button>
-            </p>
-            { 
-                showSteps && 
-                <div> 
-                    <h4>Techniques</h4>
-                    <ol> {steps.map(step => (<li key={step?.name}><a href={step?.link}>{step?.name}</a></li>))} </ol>
-                </div>
-            }
-        </>
-    );
-}
+const Steps = ({steps}: {steps: any[]}) => (
+    <article key="steps">
+        <h3>Steps</h3>
+        {steps.map((name: string) => (
+            <div key={name} id={name}>
+                <input type="checkbox" name={name} value={name} />
+                <label htmlFor={name}> {name} </label>
+            </div>
+        ))}
+    </article>
+);
 
 export default memo(Steps);

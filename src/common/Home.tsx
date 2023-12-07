@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import { memo } from "react";
 
-import steps from "./data/index";
+import props from "./data/index";
 
 /**
  * Renders the Home component.
@@ -10,15 +10,10 @@ import steps from "./data/index";
  * @return {JSX.Element} The JSX element representing the Home component.
  */
 const Home = (): JSX.Element => {
-    const Steps = dynamic(() => import('./Steps'));
+    const IndexSteps = dynamic(() => import('./IndexSteps'));
     const NextStep = dynamic(() => import('./NextStep'));
     const BlankATag = dynamic(() => import('./BlankATag'));
     const AdditionalInfo = dynamic(() => import('./AdditionalInfo'));
-
-    const next = {
-        link: "/reconnaissance",
-        text: "Let's Get Started",
-    }
 
     return (
         <section>
@@ -30,10 +25,10 @@ const Home = (): JSX.Element => {
                     MITRE ATT&CK® is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. 
                     The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.
                 </p>
-                <Steps steps={steps} />
+                <IndexSteps steps={props.steps} />
             </article>
             <AdditionalInfo />
-            <NextStep next={next}/>
+            <NextStep next={props.next}/>
         </section>
     );
 }

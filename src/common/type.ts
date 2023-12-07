@@ -30,9 +30,17 @@ export type blankATagType = {
     text: string;
 };
 
-export type indexType = {
+type indexStepType = {
     link: string;
     name: string;
+}
+
+export type indexType = {
+    steps: indexStepType[]
+    next: {
+        link: string;
+        text: string;
+    }
 }
 
 export type nextStepType = {
