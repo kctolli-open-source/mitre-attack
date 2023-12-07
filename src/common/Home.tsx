@@ -1,19 +1,24 @@
-"use client";
-import { GrLinkNext } from "react-icons/gr";
-import { useState } from "react";
+import dynamic from "next/dynamic";
+import { memo } from "react";
 
-import AdditionalInfo from "./AdditionalInfo";
-import BlankATag from "./BlankATag";
 import steps from "./data/index";
 
 /**
  * Renders the Home component.
- * Dependent on React.useState and react-icons.GrLinkNext
+ * Dependent on React.memo
  *
  * @return {JSX.Element} The JSX element representing the Home component.
  */
-export default function Home(): JSX.Element {
-    const [showSteps, setShowSteps] = useState(false);
+const Home = (): JSX.Element => {
+    const Steps = dynamic(() => import('./Steps'));
+    const NextStep = dynamic(() => import('./NextStep'));
+    const BlankATag = dynamic(() => import('./BlankATag'));
+    const AdditionalInfo = dynamic(() => import('./AdditionalInfo'));
+
+    const next = {
+        link: "/reconnaissance",
+        text: "Let's Get Started",
+    }
 
     return (
         <section>
@@ -25,22 +30,12 @@ export default function Home(): JSX.Element {
                     MITRE ATT&CK® is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. 
                     The ATT&CK knowledge base is used as a foundation for the development of specific threat models and methodologies in the private sector, in government, and in the cybersecurity product and service community.
                 </p>
-                <p>
-                    MITRE ATT&CK® Framework contains 14 techniques and tactics. To view the techniques click: <button onClick={() => setShowSteps(showSteps ? false : true)}>here</button>
-                </p>
-                { 
-                    showSteps && 
-                    <div> 
-                        <h4>Techniques</h4>
-                        <ol> {steps.map(step => (<li key={step?.name}><a href={step?.link}>{step?.name}</a></li>))} </ol>
-                    </div>
-                }
+                <Steps steps={steps} />
             </article>
             <AdditionalInfo />
-            <span key="Get Started" className="next-step">
-                <a href="/reconnaissance">Lets Get Started</a>
-                <GrLinkNext />
-            </span>
+            <NextStep next={next}/>
         </section>
     );
 }
+
+export default memo(Home);

@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { BlankATagType } from "./type";
+import { blankATagType } from "./type";
 
 /**
  * Renders a blank Target anchor tag with the specified link and text.
@@ -9,8 +9,12 @@ import { BlankATagType } from "./type";
  * @param {string} text - The text to display within the anchor tag.
  * @return {JSX.Element} - The JSX element representing the anchor tag.
  */
-const BlankATag = ({link, text}: BlankATagType): JSX.Element => (
-    <a href={link} target="_blank" rel="noopener noreferrer"> 
+const BlankATag = ({link, text}: blankATagType): JSX.Element => (
+    <a 
+        href={link} 
+        target="_blank" 
+        rel="noopener noreferrer"
+    > 
         {text} 
     </a>
 );

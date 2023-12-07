@@ -1,13 +1,16 @@
 import Components from '../common/main';
-import styles from './page.module.css';
 
+/**
+ * Render the Home component.
+ * Dependent on Components Class
+ *
+ * @return {JSX.Element} The rendered Home component.
+ */
 export default function Home() {
   return (
-    <>
-      <main className={styles.main}>
-        <Components.Router routes={Components.routes} />
-      </main>
+    <main>
+      <Components.Router routes={Components.routes} />
       <Components.Footer />
-    </>
-  )
+    </main>
+  );
 }

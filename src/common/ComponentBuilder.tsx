@@ -1,14 +1,19 @@
-import { GrLinkNext } from "react-icons/gr";
+import dynamic from "next/dynamic";
+import { memo } from "react";
+
 import { componentBuilderType } from "./type";
 
 /**
  * Builds Components for each route.
- * Dependent on react-icons.GrLinkNext
+ * Dependent on react-icons.GrLinkNext and React.memo
  * 
  * @param props the data for the component
  * @returns {JSX.Element} The JSX element representing the Component.
  */
-export default function ComponentBuilder({props}: componentBuilderType): JSX.Element {
+const ComponentBuilder = ({props}: componentBuilderType): JSX.Element => {
+    const NextStep = dynamic(() => import('./NextStep'));
+    props.next.text = `Next Step: ${props.next.text}`;
+
     return (
         <>
             <h2>{props.title}</h2>
@@ -26,11 +31,10 @@ export default function ComponentBuilder({props}: componentBuilderType): JSX.Ele
                         </div>
                     ))}
                 </article>
-                <a href={props.next.link} key={`Next Step ${props.next.text}`} className="next-step">
-                    Next Step: {props.next.text}
-                    <GrLinkNext />
-                </a>
+                <NextStep next={props.next}/>
             </section>
         </>
     );
 }
+
+export default memo(ComponentBuilder);

@@ -25,7 +25,7 @@ export type routeType = {
     element: JSX.Element;
 }
 
-export type BlankATagType = {
+export type blankATagType = {
     link: string; 
     text: string;
 };
@@ -33,4 +33,11 @@ export type BlankATagType = {
 export type indexType = {
     link: string;
     name: string;
+}
+
+export type nextStepType = {
+    next: {
+        link: string; 
+        text: string;
+    }
 }

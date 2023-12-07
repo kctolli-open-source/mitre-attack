@@ -1,6 +1,12 @@
 import { memo } from "react";
 import BlankATag from "./BlankATag";
 
+/**
+ * Renders additional information section.
+ * Dependent on React.memo
+ *
+ * @return {JSX.Element} The JSX element representing the additional information section.
+ */
 const AdditionalInfo = (): JSX.Element => (
     <article>
         <h3>Additional Info</h3>
